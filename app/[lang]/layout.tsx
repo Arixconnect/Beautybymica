@@ -17,8 +17,8 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
     metadataBase: new URL(siteUrl + '/'), title: t.title, description: t.description,
     robots: { index: false, follow: false },
     alternates: { canonical: `${siteUrl}/${lang}/`, languages: { ...Object.fromEntries(locales.map(l => [l, `${siteUrl}/${l}/`])), 'x-default': `${siteUrl}/en/` } },
-    openGraph: { title: t.title, description: t.description, type: 'website', url: `${siteUrl}/${lang}/`, siteName: 'Beauty by Mica', images: [{ url: `${siteUrl}/images/hero.webp`, width: 1200, height: 1500, alt: t.heroAlt }] },
-    twitter: { card: 'summary_large_image', title: t.title, description: t.description, images: [`${siteUrl}/images/hero.webp`] },
+    openGraph: { title: t.title, description: t.description, type: 'website', url: `${siteUrl}/${lang}/`, siteName: 'Beauty by Mica', images: [{ url: `${siteUrl}/images/glamorous-glam.webp`, width: 964, height: 1381, alt: t.heroAlt }] },
+    twitter: { card: 'summary_large_image', title: t.title, description: t.description, images: [`${siteUrl}/images/glamorous-glam.webp`] },
     icons: { icon: asset('/favicon.svg') },
   };
 }

@@ -9,7 +9,7 @@
 ## Brand and content
 - Exact core palette: #F5B8C1, #FFFFFF, #101010. No unrelated gold, beige or lavender.
 - Distinctive editorial typography, generous spacing, restrained movement, concise copy, mobile booking access.
-- Original circular logo and consented client photography have not been supplied. BM is explicitly provisional. AI cosmetics still life is labeled; it is never Mica's work or products.
+- On 22 October 2026 the owner supplied authentic client photos, two brand logos, a price list and policy. Use the supplied photography and branding; never invent before/after pairs or retouch client results.
 - No invented portrait, transformation, service, price, qualification, review, contact, booking URL or private personal story.
 - No actual bookings until confirmed Setmore/contact links are configured. No payments or unnecessary backend.
 - English default; /en/, /pap/, /nl/, /es/. Translation dictionaries only. Draft translations remain labeled pending native review, especially Curaçao Papiamentu.
@@ -17,7 +17,7 @@
 
 ## Quality gates
 - Run lint, TypeScript and production export after material code changes.
-- Test 375, 768, 1024 and 1440 widths; all locales; language selection; fragment navigation; keyboard menu, comparison slider and booking dialog.
+- Test 375, 768, 1024 and 1440 widths; all locales; language selection; fragment navigation; keyboard menu and booking dialog.
 - Check overflow, image loading, console errors, focus visibility and reduced motion.
 - No trackers, remote fonts, secrets or user-data collection in this phase. Use minimal dependencies and audit them.
 - Security policy hashes are generated against exact exported scripts. Regenerate after each build. GitHub Pages does not support application-defined response headers; do not claim full header control.
