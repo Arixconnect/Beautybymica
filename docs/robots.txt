@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /
+# Design preview: indexing will open after content approval.
+Sitemap: https://arixconnect.github.io/Beautybymica/sitemap.xml
