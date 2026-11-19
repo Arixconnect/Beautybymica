@@ -2,7 +2,7 @@ import fs from 'node:fs';
 import crypto from 'node:crypto';
 import assert from 'node:assert/strict';
 const base = process.env.NEXT_PUBLIC_BASE_PATH || '';
-const origin = (process.env.NEXT_PUBLIC_SITE_URL || 'https://arixconnect.github.io/Beautybymica').replace(/\/$/, '');
+const origin = (process.env.NEXT_PUBLIC_SITE_URL || 'https://beautybymica.com').replace(/\/$/, '');
 for (const lang of ['en', 'pap', 'nl', 'es']) {
   const html = fs.readFileSync(`out/${lang}/index.html`, 'utf8');
   assert(html.includes(`<html lang="${lang}"`), `${lang}: HTML language`);
@@ -23,5 +23,6 @@ for (const lang of ['en', 'pap', 'nl', 'es']) {
   }
 }
 assert(fs.existsSync('out/.nojekyll'));
+assert.equal(fs.readFileSync('out/CNAME', 'utf8'), 'beautybymica.com\n');
 assert(fs.readFileSync('out/robots.txt', 'utf8').includes('Disallow: /'));
 console.log('PASS: 4 locale documents, canonical/hreflang, preview indexing, structured data, anchors, local assets and exact CSP hashes.');

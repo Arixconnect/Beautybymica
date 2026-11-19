@@ -2,7 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
 const base = process.env.NEXT_PUBLIC_BASE_PATH || '';
-const origin = (process.env.NEXT_PUBLIC_SITE_URL || 'https://arixconnect.github.io/Beautybymica').replace(/\/$/, '');
+const origin = (process.env.NEXT_PUBLIC_SITE_URL || 'https://beautybymica.com').replace(/\/$/, '');
 const langs = ['en', 'pap', 'nl', 'es'];
 for (const lang of langs) {
   const file = `out/${lang}/index.html`;
@@ -14,6 +14,7 @@ fs.writeFileSync('out/404.html', `<!doctype html><html lang="en"><head><meta cha
 fs.writeFileSync('out/robots.txt', `User-agent: *\nDisallow: /\n# Design preview: indexing will open after content approval.\nSitemap: ${origin}/sitemap.xml\n`);
 fs.writeFileSync('out/sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">${langs.map(l => `<url><loc>${origin}/${l}/</loc>${langs.map(alt => `<xhtml:link rel="alternate" hreflang="${alt}" href="${origin}/${alt}/"/>`).join('')}<xhtml:link rel="alternate" hreflang="x-default" href="${origin}/en/"/></url>`).join('')}</urlset>`);
 fs.writeFileSync('out/.nojekyll', '');
+fs.writeFileSync('out/CNAME', 'beautybymica.com\n');
 // Static hosts cannot inject nonces. Hash the exact exported inline scripts.
 // No user HTML or arbitrary external scripts are accepted by this application.
 function harden(dir) {
